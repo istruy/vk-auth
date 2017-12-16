@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test App</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/jumbotron-narrow.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h3 class="text-muted">Тестовое приложения для VK</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Wonderful App</h1>
+        <p class="lead">Откройте все грани Wonderful App прямо сейчас! </p>
+        <p><a class="btn btn-lg btn-success" href="https://oauth.vk.com/authorize?client_id=6155151&display=page&redirect_uri=http://localhost/vk/auth.php&scope=offline,friends&response_type=code" role="button">Авторизоваться</a></p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>Удобство</h4>
+            <p>Войти в Wonderful App можно с помощью аккаунта VK</p>
+
+            <h4>Комфорт</h4>
+            <p>Wonderful App - это как второй дом</p>
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Креатив</h4>
+            <p>Только самые смелые и неожиданные sketches в нашем App</p>
+
+            <h4>Добро</h4>
+            <p>Здесь Вам рады</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Irina S 2017</p>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script>
+    $(document).ready(function() {
+        var result = '';
+        setInterval(pinger, 300000);
+    });
+
+    function pinger()
+    {
+        $.post("/ajax/pinger.php", function(result) {
+        });
+    }
+</script>
+</body>
+</html>
